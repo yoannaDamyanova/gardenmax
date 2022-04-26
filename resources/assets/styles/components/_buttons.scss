@@ -1,0 +1,56 @@
+//
+// Buttons
+//
+[class*='#{$btn-prefix}-'] {
+  color: $white;
+  transition: $btn-transition;
+}
+
+.#{$btn-prefix} {
+  display: inline-block;
+  max-width: 100%;
+  padding: $btn-padding-y $btn-padding-x;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $btn-color;
+  text-align: center;
+  line-height: $btn-line-height;
+  text-decoration: $btn-decoration;
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width $btn-border-style $btn-border-color;
+  border-radius: $btn-border-radius;
+
+    @at-root a#{&} {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: normal;
+    }
+
+    @include media-breakpoint-up(sm) {
+      height: $btn-height-desktop;
+      font-size: $btn-font-size-desktop;
+    }
+
+    @include media-breakpoint-down(xs) {
+      height: $btn-height-mobile;
+      font-size: $btn-font-size-mobile;
+    }
+
+    &:hover {
+      text-decoration: $btn-hover-decoration;
+    }
+
+    &.disabled,
+    &:disabled {
+      opacity: $btn-disabled-opacity;
+    }
+}
+//
+// Alternate buttons
+//
+@include make-btn-colors();
+@include make-btn-ghost();

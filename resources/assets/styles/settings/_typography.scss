@@ -1,0 +1,54 @@
+// WP THEMES
+$font-family: var(--font-family);
+$font-size-desktop: var(--font-size-desktop);
+$font-size-mobile: var(--font-size-mobile);
+$font-weight: var(--font-weight);
+
+// Base
+$font-family-base: $font-family;
+$font-size-base: $font-size-desktop;
+$font-weight-base: $font-weight;
+$line-height-base: 1;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+// Headings
+$headings-font-family: null;
+$headings-line-height: 1.2;
+$headings-font-weights: (
+  'h1': var(--h1-font-weight),
+  'h2': var(--h2-font-weight),
+  'h3': var(--h3-font-weight),
+  'h4': var(--h4-font-weight),
+  'h5': var(--h5-font-weight),
+  'h6': var(--h6-font-weight),
+);
+
+$heading-desktop: (
+  'h1': var(--h1-desktop),
+  'h2': var(--h2-desktop),
+  'h3': var(--h3-desktop),
+  'h4': var(--h4-desktop),
+  'h5': var(--h5-desktop),
+  'h6': var(--h6-desktop)
+);
+
+$heading-mobile: (
+  'h1': var(--h1-mobile),
+  'h2': var(--h2-mobile),
+  'h3': var(--h3-mobile),
+  'h4': var(--h4-mobile),
+  'h5': var(--h5-mobile),
+  'h6': var(--h6-mobile)
+);
+
+$list-position: inside;
+
+$ul-list-style-type: none;
+$ol-list-style-type: decimal;

@@ -1,0 +1,12 @@
+//
+// Links
+//
+
+a {
+  color: inherit;
+  text-decoration: $link-decoration;
+
+    &:hover {
+      text-decoration: $link-hover-decoration;
+    }
+}
