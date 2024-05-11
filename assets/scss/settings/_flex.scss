@@ -74,7 +74,7 @@ $flex-align-contents: (
   's' : stretch
 );
 
-// Flex align content
+// Flex align Self
 $flex-align-selfs: (
   'a' : auto,
   'fs': flex-start,
@@ -84,22 +84,6 @@ $flex-align-selfs: (
   's' : stretch
 );
 
-
-// Flex Aligns
-$flex-aligns: (
-  'ai': (
-    align-items: $flex-align-items
-  ),
-  'jc': (
-    justify-content: $flex-justify-contents
-  ),
-  'ac': (
-    align-content: $flex-align-contents
-  ),
-  'as': (
-    align-self: $flex-align-selfs
-  )
-);
 
 // Flex Aligns
 $flex-aligns: (
