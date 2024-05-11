@@ -1,0 +1,12 @@
+//
+// Container
+//
+$container-gutter-width: $gutter;
+$container-max-widths: (
+  md: 992px,
+  lg: 1200px,
+);
+
+$container-width-fluid:  1792px;
+
+@include _assert-ascending($container-max-widths, '$container-max-widths');

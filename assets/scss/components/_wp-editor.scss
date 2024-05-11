@@ -1,0 +1,110 @@
+@use 'sass:math';
+
+.wp-editor,
+.entry-content,
+.woocommerce-product-details__short-description {
+  line-height: 1.4em;
+
+    blockquote,
+    ul,
+    ol,
+    p,
+    li,
+    table,
+    br {
+
+        &:not(:last-child) {
+          @extend .mb-15;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $headings-color;
+
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+
+        @include media-breakpoint-up(sm) {
+          clear: both;
+        }
+    }
+
+    ol {
+      list-style-type: decimal;
+      list-style-position: inside;
+    }
+
+    ul {
+
+        li {
+          @extend .pl-20;
+          background: escape-svg('<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9956 0.0346333C11.7212 0.125383 11.7127 0.133756 8.22915 3.76398L4.80154 7.33589L3.25064 5.7226C1.84368 4.25902 1.68377 4.10123 1.52753 4.02215C0.880768 3.69474 0.14567 4.0806 0.0158118 4.81567C-0.0251371 5.04744 0.0141697 5.29876 0.125365 5.51639C0.186567 5.63617 0.616517 6.09816 2.20229 7.74826C4.09407 9.71677 4.21118 9.83327 4.37133 9.9061C4.57412 9.99832 4.85479 10.0264 5.04254 9.97333C5.35983 9.88356 5.22393 10.0179 9.28654 5.77798C13.4952 1.38554 13.2549 1.65456 13.3188 1.26513C13.4073 0.726048 13.0831 0.201098 12.5591 0.0352041C12.4115 -0.0115027 12.136 -0.0117745 11.9956 0.0346333Z" fill="#03A155"/></svg>') 0 7px no-repeat;
+        }
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: $link-decoration;
+
+        &:hover {
+          color: $color-1;
+          text-decoration: $link-hover-decoration;
+        }
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+
+        @include media-breakpoint-up(sm) {
+          height: 600px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          height: 400px;
+        }
+    }
+
+    table {
+      width: 100%;
+
+        td, th {
+          @extend .p-10;
+          border: 1px solid $text-color;
+        }
+    }
+}
+
+img {
+
+    &.alignnone,
+    &.aligncenter,
+    &.alignleft,
+    &.alignright {
+      @extend .mb-u-md-20, .mb-d-sm-10;
+    }
+
+    &.alignnone {
+      @extend .d-b;
+    }
+
+    &.aligncenter {
+      @extend .d-b, .mx-a;
+    }
+
+    &.alignleft {
+      float: left;
+      @extend .mr-u-md-20, .mr-d-sm-10;
+    }
+
+    &.alignright {
+      float: right;
+      @extend .ml-u-md-20, .ml-d-sm-10;
+    }
+}
