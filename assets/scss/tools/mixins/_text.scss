@@ -340,7 +340,7 @@
 // Letter Spacing
 @mixin make-letter-spacing($spacings: $letter-spaings, $breakpoints: $grid-breakpoints) {
   @each $key, $value in $spacings {
-    .#{$letter-spacin-prefix}-#{$key} { letter-spacing: $value; }
+    .#{$letter-spacing-prefix}-#{$key} { letter-spacing: $value; }
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -350,7 +350,7 @@
       @include media-breakpoint-up($breakpoint, $breakpoints) {
         $media: map-get($media-prefix, up);
         @each $key, $value in $spacings {
-          .#{$letter-spacin-prefix}-#{$media}#{$infix}-#{$key} { letter-spacing: $value; }
+          .#{$letter-spacing-prefix}-#{$media}#{$infix}-#{$key} { letter-spacing: $value; }
         }
       }
 
@@ -358,7 +358,7 @@
         @include media-breakpoint-down($breakpoint, $breakpoints) {
           $media: map-get($media-prefix, down);
           @each $key, $value in $spacings {
-            .#{$letter-spacin-prefix}-#{$media}#{$infix}-#{$key} { letter-spacing: $value; }
+            .#{$letter-spacing-prefix}-#{$media}#{$infix}-#{$key} { letter-spacing: $value; }
           }
         }
       }
@@ -367,7 +367,7 @@
     @include media-breakpoint-only($breakpoint, $breakpoints) {
       $media: map-get($media-prefix, only);
       @each $key, $value in $spacings {
-        .#{$letter-spacin-prefix}-#{$media}#{$infix}-#{$key} { letter-spacing: $value; }
+        .#{$letter-spacing-prefix}-#{$media}#{$infix}-#{$key} { letter-spacing: $value; }
       }
     }
   }
