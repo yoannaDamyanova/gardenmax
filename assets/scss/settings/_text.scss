@@ -23,7 +23,6 @@ $text-transforms: (
   'l': lowercase,
   'u': uppercase,
   'c': capitalize,
-  'j': justify
 );
 
 // Text Decaration
@@ -75,11 +74,13 @@ $font-families: (
 // Font Weights
 $font-weight-prefix: 'fw';
 $font-weights: (
+  'el': $font-weight-exlight,
   'l' : $font-weight-light,
   'n' : $font-weight-normal,
   'm' : $font-weight-medium,
   'sb': $font-weight-semibold,
   'b' : $font-weight-bold,
+  'eb' : $font-weight-eb,
   'bl': $font-weight-black
 );
 
