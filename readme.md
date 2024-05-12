@@ -973,7 +973,7 @@ px-d-md-a
 ```
 
 - **Text styles** - settings/_text.scss
-Генерират се класове за flex елементите **flex**, **color**, **text-align**, **text-transform**, **text-decoration**, **font-size**, **line-height**, **font-family**, **font-weight**, **font-style**, **letter-spacing**
+Генерират се класове за текстове елементите **color**, **text-align**, **text-transform**, **text-decoration**, **font-size**, **line-height**, **font-family**, **font-weight**, **font-style**, **letter-spacing**
 
 ```scss
 /* Text */
@@ -998,8 +998,7 @@ $text-transforms: (
   'n': none,
   'l': lowercase,
   'u': uppercase,
-  'c': capitalize,
-  'j': justify
+  'c': capitalize
 );
 
 /* Text Decaration */
@@ -1051,11 +1050,13 @@ $font-families: (
 /* Font Weights */
 $font-weight-prefix: 'fw';
 $font-weights: (
+  'el': $font-weight-exlight,
   'l' : $font-weight-light,
   'n' : $font-weight-normal,
   'm' : $font-weight-medium,
   'sb': $font-weight-semibold,
   'b' : $font-weight-bold,
+  'eb' : $font-weight-eb,
   'bl': $font-weight-black
 );
 
@@ -1074,8 +1075,9 @@ $letter-spaings: (
 );
 ```
 
-CSS класове за свойство **text-color**
-За свойството **text-color** може да се прилога и за елементи при преминава с мишката (hover) и елемент имащи клас .active. Добавят се следните буктви в клас:
+CSS класове за свойство **color**
+
+За свойството **color** може да се прилaга и за елементи при преминава с мишката (hover) и елементи имащи клас **active**. Добавят се следните буктви в класa:
 - **h** - за hover
 - **a** - за active
 
@@ -1165,6 +1167,403 @@ tc-h-d-md-i
 tc-a-d-md-i
 ```
 
+CSS класове за свойство **text-align**
+
+```css
+/* За всички резолюции */
+ta-l
+ta-c
+ta-r
+ta-j
+
+/* За екрани които са точно за md точката на прекъсване. */
+ta-o-md-l
+ta-o-md-c
+ta-o-md-r
+ta-o-md-j
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+ta-u-md-l
+ta-u-md-c
+ta-u-md-r
+ta-u-md-j
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+ta-d-md-l
+ta-d-md-c
+ta-d-md-r
+ta-d-md-j
+```
+
+CSS класове за свойство **text-transform**
+
+```css
+/* За всички резолюции */
+tt-n
+tt-l
+tt-u
+tt-c
+
+/* За екрани които са точно за md точката на прекъсване. */
+tt-o-md-n
+tt-o-md-l
+tt-o-md-u
+tt-o-md-c
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+tt-u-md-n
+tt-u-md-l
+tt-u-md-u
+tt-u-md-c
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+tt-d-md-n
+tt-d-md-l
+tt-d-md-u
+tt-d-md-c
+```
+
+CSS класове за свойство **text-decoration**
+
+За свойството **text-decoration** може да се прилaга и за елементи при преминава с мишката (hover). Добавят се следните буктви в класa:
+- **h** - за hover
+
+```css
+/* За всички резолюции */
+td-n
+td-h-n
+td-u
+td-h-u
+
+/* За екрани които са точно за md точката на прекъсване. */
+td-o-md-n
+td-o-md-h-n
+td-o-md-u
+td-o-md-h-u
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+td-u-md-n
+td-u-md-h-n
+td-u-md-u
+td-u-md-h-u
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+td-d-md-n
+td-d-md-h-n
+td-d-md-u
+td-d-md-h-u
+```
+
+CSS класове за свойство **font-size**
+
+```css
+/* За всички резолюции */
+fs-0
+fs-10
+fs-11
+fs-12
+fs-13
+fs-14
+fs-15
+...
+fs-60
+
+/* За екрани които са точно за md точката на прекъсване. */
+fs-o-md-0
+fs-o-md-10
+fs-o-md-11
+fs-o-md-12
+fs-o-md-13
+fs-o-md-14
+fs-o-md-15
+...
+fs-o-md-60
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+fs-u-md-0
+fs-u-md-10
+fs-u-md-11
+fs-u-md-12
+fs-u-md-13
+fs-u-md-14
+fs-u-md-15
+fs-u-md-60
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+fs-d-md-0
+fs-d-md-10
+fs-d-md-11
+fs-d-md-12
+fs-d-md-13
+fs-d-md-14
+fs-d-md-15
+fs-d-md-60
+```
+
+CSS класове за свойство **line-height**
+
+```css
+/* За всички резолюции */
+lh-0
+lh-1
+lh-1-2
+lh-1-4
+lh-1-5
+
+/* За екрани които са точно за md точката на прекъсване. */
+lh-o-md-0
+lh-o-md-1
+lh-o-md-1-2
+lh-o-md-1-4
+lh-o-md-1-5
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+lh-u-md-0
+lh-u-md-1
+lh-u-md-1-2
+lh-u-md-1-4
+lh-u-md-1-5
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+lh-d-md-0
+lh-d-md-1
+lh-d-md-1-2
+lh-d-md-1-4
+lh-d-md-1-5
+```
+
+CSS класове за свойство **font-family**
+
+```css
+/* За всички резолюции */
+ff-b
+ff-h
+
+/* За екрани които са точно за md точката на прекъсване. */
+ff-o-md-b
+ff-o-md-h
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+ff-u-md-b
+ff-u-md-h
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+ff-d-md-b
+ff-d-md-h
+```
+
+CSS класове за свойство **font-weight**
+
+```css
+/* За всички резолюции */
+fw-el
+fw-l
+fw-n
+fw-m
+fw-sb
+fw-b
+fw-eb
+fw-bl
+
+/* За екрани които са точно за md точката на прекъсване. */
+fw-o-md-el
+fw-o-md-l
+fw-o-md-n
+fw-o-md-m
+fw-o-md-sb
+fw-o-md-b
+fw-o-md-eb
+fw-o-md-bl
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+fw-u-md-el
+fw-u-md-l
+fw-u-md-n
+fw-u-md-m
+fw-u-md-sb
+fw-u-md-b
+fw-u-md-eb
+fw-u-md-bl
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+fw-d-md-el
+fw-d-md-l
+fw-d-md-n
+fw-d-md-m
+fw-d-md-sb
+fw-d-md-b
+fw-d-md-eb
+fw-d-md-bl
+```
+
+CSS класове за свойство **font-style**
+
+```css
+/* За всички резолюции */
+fst-i
+
+/* За екрани които са точно за md точката на прекъсване. */
+fst-o-md-i
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+fst-u-md-i
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+fst-d-md-i
+```
+
+CSS класове за свойство **letter-spacing**
+
+```css
+/* За всички резолюции */
+ls-0
+ls-1
+ls-2
+
+/* За екрани които са точно за md точката на прекъсване. */
+ls-o-md-0
+ls-o-md-1
+ls-o-md-2
+
+/* За екрани които са по-големи от md точката на прекъсване. */
+ls-u-md-0
+ls-u-md-1
+ls-u-md-2
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+ls-d-md-0
+ls-d-md-1
+ls-d-md-2
+```
+
+За останалите точки на прекъсване се сменят префиксите за **up, down, only** и размера на екрана **xs, sm, md, lg**.
+
+Някой допълнинитени класове, които също са включени за стилизирнане на тескт:
+- ws-nw - този клас отговравя на свойството ```white-space: nowrap```
+
+- tl-2 - този клас огранчва текста до 2 реда.
+<br>
+- **Background** - settings/_background.scss
+
+Генерират се класове за фонотово оформление.
+
+```css
+/* Background Color */
+$bg-prefix: 'bg';
+$bg-colors: map-merge((),
+$theme-colors);
+```
+
+CSS класове за свойство **backgorund-color**. <br>
+За свойството **backgorund-color** може да се прилaга и за елементи при преминава с мишката (hover) и елементи имащи клас **active**. Добавят се следните буктви в клас:
+
+**h** - за hover
+**a** - за active
+
+```css
+/* За всички резолюции */
+bg-1
+bg-h-1
+bg-a-1
+bg-2
+bg-h-2
+bg-a-2
+bg-3
+bg-h-3
+bg-a-3
+bg-4
+bg-h-4
+bg-a-4
+bg-5
+bg-h-5
+bg-a-5
+bg-w
+bg-h-w
+bg-a-w
+bg-b
+bg-h-b
+bg-a-b
+bg-i
+bg-h-i
+bg-a-i
+
+/* За екрани които са точно за md точката на прекъсване. */
+bg-o-md-1
+bg-o-md-h-1
+bg-o-md-a-1
+bg-o-md-2
+bg-o-md-h-2
+bg-o-md-a-2
+bg-o-md-3
+bg-o-md-h-3
+bg-o-md-a-3
+bg-o-md-4
+bg-o-md-h-4
+bg-o-md-a-4
+bg-o-md-5
+bg-o-md-h-5
+bg-o-md-a-5
+bg-o-md-w
+bg-o-md-h-w
+bg-o-md-a-w
+bg-o-md-b
+bg-o-md-h-b
+bg-o-md-a-b
+bg-o-md-i
+bg-o-md-h-i
+bg-o-md-a-i
+/* За екрани които са по-големи от md точката на прекъсване. */
+bg-u-md-1
+bg-u-md-h-1
+bg-u-md-a-1
+bg-u-md-2
+bg-u-md-h-2
+bg-u-md-a-2
+bg-u-md-3
+bg-u-md-h-3
+bg-u-md-a-3
+bg-u-md-4
+bg-u-md-h-4
+bg-u-md-a-4
+bg-u-md-5
+bg-u-md-h-5
+bg-u-md-a-5
+bg-u-md-w
+bg-u-md-h-w
+bg-u-md-a-w
+bg-u-md-b
+bg-u-md-h-b
+bg-u-md-a-b
+bg-u-md-i
+bg-u-md-h-i
+bg-u-md-a-i
+
+/* За екрани които са по-малко от md точката на прекъсване. */
+bg-d-md-1
+bg-d-md-h-1
+bg-d-md-a-1
+bg-d-md-2
+bg-d-md-h-2
+bg-d-md-a-2
+bg-d-md-3
+bg-d-md-h-3
+bg-d-md-a-3
+bg-d-md-4
+bg-d-md-h-4
+bg-d-md-a-4
+bg-d-md-5
+bg-d-md-h-5
+bg-d-md-a-5
+bg-d-md-w
+bg-d-md-h-w
+bg-d-md-a-w
+bg-d-md-b
+bg-d-md-h-b
+bg-d-md-a-b
+bg-d-md-i
+bg-d-md-h-i
+bg-d-md-a-i
+```
 За останалите точки на прекъсване се сменят префиксите за **up, down, only** и размера на екрана **xs, sm, md, lg**.
 
 - **Verticla Align** - settings/_align.scss
