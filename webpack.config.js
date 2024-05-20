@@ -20,8 +20,8 @@ const files = glob.sync(environment.paths.source+`/{js,scss}/**/!(_)*.+(ts|js|sc
 
 const entries = files.map((file) => ({
   name: path.parse(file).name,
-  path: file, // MacOS
-  // path: './'+ file, // Windows
+  //path: file, // MacOS
+  path: './'+ file, // Windows
 })).reduce((red, file) => {
   if (red[file.name] !== undefined) {
     red[file.name].push(file.path);
