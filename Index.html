@@ -6,34 +6,38 @@
     <title>Homepage</title>
     <style type="text/css">
       :root {
-        --igs-color-1: #462e22;
-        --igs-color-1-rgb: 70, 46, 34;
-        --igs-color-2: #fbd999;
-        --igs-color-2-rgb: 251, 217, 153;
-        --igs-color-3: #fff4e0;
-        --igs-color-3-rgb: 255, 244, 224;
-        --igs-color-4: #880AC9;
-        --igs-color-4-rgb: 136, 10, 201;
-        --igs-color-5: #500ABF;
-        --igs-color-5-rgb: 80, 10, 191;
+        --igs-color-1: #28A745;
+        --igs-color-1-rgb: 40, 167, 69;
+        --igs-color-2: #325E1F;
+        --igs-color-2-rgb: 50, 94, 31;
+        --igs-color-3: #0084C5;
+        --igs-color-3-rgb: 0, 132, 197;
+        --igs-color-4: #FFA500;
+        --igs-color-4-rgb: 255, 165, 0;
+        --igs-color-5: #DC0000;
+        --igs-color-5-rgb: 220, 0, 0;
+        --igs-color-6: #DEE2E6;
+        --igs-color-6-rgb: 222, 226, 230;
+        --igs-color-7: #212529;
+        --igs-color-7-rgb: 33, 37, 41;
         --igs-text-color: #000000;
-        --igs-link-color: #462e22;
-        --igs-title-color: #462e22;
+        --igs-link-color: #28A745;
+        --igs-title-color: #000000;
         --igs-font-weight: regular;
         --igs-font-family: Montserrat;
         --igs-font-size-desktop: 16px;
         --igs-font-size-mobile: 16px;
         --igs-headings-font-family: Montserrat;
         --igs-headings-font-weight: 700;
-        --igs-h1-desktop: 60px;
+        --igs-h1-desktop: 30px;
         --igs-h1-mobile: 40px;
-        --igs-h2-desktop: 46px;
+        --igs-h2-desktop: 26px;
         --igs-h2-mobile: 32px;
-        --igs-h3-desktop: 24px;
+        --igs-h3-desktop: 22px;
         --igs-h3-mobile: 20px;
-        --igs-h4-desktop: 22px;
+        --igs-h4-desktop: 20px;
         --igs-h4-mobile: 20px;
-        --igs-h5-desktop: 20px;
+        --igs-h5-desktop: 18px;
         --igs-h5-mobile: 20px;
         --igs-h6-desktop: 16px;
         --igs-h6-mobile: 16px;
@@ -43,8 +47,39 @@
     <link rel="stylesheet" href="./resources/css/styles.css">
   </head>
   <body>
-    <H1>Index</H1>
-
+    <link rel="stylesheet" href="./resources/css/homepage.css">
+    <div class="login ps-r">
+      <div class="header bg-7">
+        <div class="logo d-f jc-c py-12">
+          <img src="./resources/images/logo/gardenmax-white 1.svg" alt="logo">
+        </div>
+      </div>
+      <div class="form pb-90">
+        <div class="container">
+          <div class="row mt-40 d-f ai-c f-c ta-c">
+              <h1 class="h1">Добре дошли в Garden Max</h1>
+              <p class="mt-10">Тази система е само корпоративни клиенти на GardenMax.</p>           
+            <form class="login-form mt-40 d-f f-c gy-25" action="get">
+              <h1 class="h1 tt-u ta-c">ВХОД</h1>
+              <input type="text" name="username" placeholder="Потребителско име" class="input b-1 bc-7 br-p py-12 pl-15">
+              <input type="text" name="password" placeholder="Парола" class="input b-1 bc-7 br-p py-12 pl-15">
+              <div class="checkbox-group ta-l d-f f-r ai-c">
+                <input type="checkbox" name="remember" id="remember" class="checkbox mr-10">
+                <label for="remember fw-b">Запомни ме</label>
+              </div>
+              <input type="button" value="Бутон" class="bg-1 tc-w br-p py-10">
+            </form>
+          </div>
+        </div>
+      </div> 
+      <footer class="footer ps-a d-f f-c gy-25 ta-c fs-14">
+        <p>Ако желаете да станете корпоративен клиенти на GardenMax, моля свържете с нас.</p>
+        <div class="contacts bg-7 d-f f-r py-5 tc-w jc-c">
+          <p class="mr-20">+359 885 557 355</p>
+          <p>GardenMAX@abv.bg</p>
+        </div>
+      </footer> 
+    </div>
     <script src="./resources/js/block-settings.js"></script>
     <script src="./resources/js/script.js"></script>
   </body>

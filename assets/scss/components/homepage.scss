@@ -1,0 +1,44 @@
+// Tools
+@import '../tools';
+
+// Settings
+@import '../settings';
+
+.login {
+    min-height: 100vh;
+}
+
+.login-form {
+    width: 400px;
+}
+
+.input {
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid $color-1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:checked::after {
+        content: url('../../../resources/images/misc/check\ 1\ \(Traced\).svg');
+        display: block;
+    }
+    &:checked {
+        background-color: $color-1;
+    }
+    &:checked:after {
+        display: block;
+    }
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+}
